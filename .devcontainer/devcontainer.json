@@ -1,0 +1,27 @@
+{
+	"name": "Ubuntu-iastate",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": { "VARIANT": "focal" }
+	},
+	"settings": {},
+	
+	"extensions": [],
+
+	
+	"forwardPorts": [6080,5901],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uname -a",
+
+	"remoteUser": "vscode",
+	"features": {
+		"git": "os-provided",
+		"desktop-lite": {
+			"password": "vscode",
+			"webPort": "6080",
+			"vncPort": "5901"
+		},
+		"homebrew": "latest"
+	}
+}
